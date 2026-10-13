@@ -1,15 +1,16 @@
 # AINCRAD Community Catalog
 
-Themes and block extensions for [AINCRAD](../AINCRAD), the SAO-style macOS launcher.
+Themes and block extensions for AINCRAD, the SAO-style macOS launcher.
 AINCRAD's **Settings › Browse** tab reads `catalog.json` from here, shows the previews, and
 installs with one click. Every download is checked against the SHA-256 listed in the catalog.
 
 ## Using it
 
-* **Local (now):** in Browse, click **Use the Local Catalog in Documents/AINCRAD-catalog**.
-  macOS may ask once whether AINCRAD can open files in Documents.
-* **Hosted (later):** push this folder to a GitHub repository, then set Browse's Catalog field to
-  `https://raw.githubusercontent.com/<you>/<repo>/main/catalog.json`.
+AINCRAD's Browse tab uses this catalog by default:
+`https://raw.githubusercontent.com/djag1337/AINCRAD-catalog/main/catalog.json`.
+
+To try changes before pushing, point Browse's Catalog field at your local copy's `catalog.json`
+(macOS may ask once whether AINCRAD can open files in Documents).
 
 ## Contents
 
