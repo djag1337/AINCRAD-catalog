@@ -1,0 +1,370 @@
+{
+  "apiVersion": 1,
+  "author": "AINCRAD",
+  "description": "A 25-minute focus timer. Add its \u201cFocus\u201d menu to your launcher as a Dynamic list, and the Focus gauge widget to your desktop.",
+  "id": "aincrad.focus-timer",
+  "name": "Focus Timer",
+  "permissions": [],
+  "provides": {
+    "menus": [
+      {
+        "id": "focus",
+        "items": [
+          {
+            "action": {
+              "target": "none",
+              "type": "builtin"
+            },
+            "icon": "sf:timer",
+            "name": "Start 25-minute focus"
+          },
+          {
+            "action": {
+              "target": "none",
+              "type": "builtin"
+            },
+            "icon": "sf:stop.circle.fill",
+            "name": "Stop focus"
+          }
+        ],
+        "name": "Focus"
+      }
+    ],
+    "scripts": [
+      {
+        "steps": [
+          {
+            "fields": {
+              "name": "minutes"
+            },
+            "inputs": {
+              "value": {
+                "fields": {
+                  "value": "25"
+                },
+                "op": "literal"
+              }
+            },
+            "op": "var.set"
+          },
+          {
+            "fields": {
+              "name": "active"
+            },
+            "inputs": {
+              "value": {
+                "fields": {
+                  "value": "1"
+                },
+                "op": "literal"
+              }
+            },
+            "op": "var.set"
+          },
+          {
+            "fields": {},
+            "inputs": {
+              "name": {
+                "fields": {
+                  "value": "Focus"
+                },
+                "op": "literal"
+              },
+              "percent": {
+                "fields": {
+                  "value": "100"
+                },
+                "op": "literal"
+              },
+              "text": {
+                "fields": {
+                  "value": "25 min left"
+                },
+                "op": "literal"
+              }
+            },
+            "op": "looks.gauge"
+          },
+          {
+            "fields": {},
+            "inputs": {
+              "text": {
+                "fields": {
+                  "value": "Focus started: 25 minutes."
+                },
+                "op": "literal"
+              }
+            },
+            "op": "looks.message"
+          }
+        ],
+        "trigger": {
+          "fields": {},
+          "inputs": {
+            "name": {
+              "fields": {
+                "value": "Start 25-minute focus"
+              },
+              "op": "literal"
+            }
+          },
+          "op": "item.chosen"
+        }
+      },
+      {
+        "steps": [
+          {
+            "fields": {
+              "name": "active"
+            },
+            "inputs": {
+              "value": {
+                "fields": {
+                  "value": "0"
+                },
+                "op": "literal"
+              }
+            },
+            "op": "var.set"
+          },
+          {
+            "fields": {},
+            "inputs": {
+              "name": {
+                "fields": {
+                  "value": "Focus"
+                },
+                "op": "literal"
+              },
+              "percent": {
+                "fields": {
+                  "value": "0"
+                },
+                "op": "literal"
+              },
+              "text": {
+                "fields": {
+                  "value": "stopped"
+                },
+                "op": "literal"
+              }
+            },
+            "op": "looks.gauge"
+          }
+        ],
+        "trigger": {
+          "fields": {},
+          "inputs": {
+            "name": {
+              "fields": {
+                "value": "Stop focus"
+              },
+              "op": "literal"
+            }
+          },
+          "op": "item.chosen"
+        }
+      },
+      {
+        "steps": [
+          {
+            "body": [
+              {
+                "fields": {
+                  "name": "minutes"
+                },
+                "inputs": {
+                  "value": {
+                    "fields": {
+                      "value": "-1"
+                    },
+                    "op": "literal"
+                  }
+                },
+                "op": "var.change"
+              },
+              {
+                "fields": {},
+                "inputs": {
+                  "name": {
+                    "fields": {
+                      "value": "Focus"
+                    },
+                    "op": "literal"
+                  },
+                  "percent": {
+                    "fields": {},
+                    "inputs": {
+                      "a": {
+                        "fields": {
+                          "name": "minutes"
+                        },
+                        "inputs": {},
+                        "op": "var.get"
+                      },
+                      "b": {
+                        "fields": {
+                          "value": "4"
+                        },
+                        "op": "literal"
+                      }
+                    },
+                    "op": "op.mul"
+                  },
+                  "text": {
+                    "fields": {},
+                    "inputs": {
+                      "a": {
+                        "fields": {
+                          "name": "minutes"
+                        },
+                        "inputs": {},
+                        "op": "var.get"
+                      },
+                      "b": {
+                        "fields": {
+                          "value": " min left"
+                        },
+                        "op": "literal"
+                      }
+                    },
+                    "op": "op.join"
+                  }
+                },
+                "op": "looks.gauge"
+              },
+              {
+                "body": [
+                  {
+                    "fields": {
+                      "name": "active"
+                    },
+                    "inputs": {
+                      "value": {
+                        "fields": {
+                          "value": "0"
+                        },
+                        "op": "literal"
+                      }
+                    },
+                    "op": "var.set"
+                  },
+                  {
+                    "fields": {},
+                    "inputs": {
+                      "text": {
+                        "fields": {
+                          "value": "Focus session complete! Take a break."
+                        },
+                        "op": "literal"
+                      }
+                    },
+                    "op": "looks.message"
+                  },
+                  {
+                    "fields": {},
+                    "inputs": {
+                      "name": {
+                        "fields": {
+                          "value": "Focus"
+                        },
+                        "op": "literal"
+                      },
+                      "percent": {
+                        "fields": {
+                          "value": "0"
+                        },
+                        "op": "literal"
+                      },
+                      "text": {
+                        "fields": {
+                          "value": "done"
+                        },
+                        "op": "literal"
+                      }
+                    },
+                    "op": "looks.gauge"
+                  }
+                ],
+                "fields": {},
+                "inputs": {
+                  "condition": {
+                    "fields": {},
+                    "inputs": {
+                      "a": {
+                        "fields": {
+                          "name": "minutes"
+                        },
+                        "inputs": {},
+                        "op": "var.get"
+                      },
+                      "b": {
+                        "fields": {
+                          "value": "1"
+                        },
+                        "op": "literal"
+                      }
+                    },
+                    "op": "op.lt"
+                  }
+                },
+                "op": "control.if"
+              }
+            ],
+            "fields": {},
+            "inputs": {
+              "condition": {
+                "fields": {},
+                "inputs": {
+                  "a": {
+                    "fields": {
+                      "name": "active"
+                    },
+                    "inputs": {},
+                    "op": "var.get"
+                  },
+                  "b": {
+                    "fields": {
+                      "value": "1"
+                    },
+                    "op": "literal"
+                  }
+                },
+                "op": "op.eq"
+              }
+            },
+            "op": "control.if"
+          }
+        ],
+        "trigger": {
+          "fields": {},
+          "inputs": {
+            "seconds": {
+              "fields": {
+                "value": "60"
+              },
+              "op": "literal"
+            }
+          },
+          "op": "timer.every"
+        }
+      }
+    ],
+    "widgets": [
+      {
+        "name": "Focus gauge",
+        "widget": {
+          "height": 70,
+          "props": {
+            "label": "Focus",
+            "show": "bar",
+            "source": "script:aincrad.focus-timer/Focus"
+          },
+          "type": "stat",
+          "width": 260
+        }
+      }
+    ]
+  },
+  "version": "1.0"
+}

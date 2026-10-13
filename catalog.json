@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "name": "AINCRAD Community Catalog",
+  "description": "Themes and block extensions for AINCRAD.",
+  "items": [
+    {
+      "id": "aincrad-classic",
+      "type": "theme",
+      "name": "Aincrad Classic",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": null,
+      "preview": "previews/aincrad-classic.png",
+      "package": "packages/themes/aincrad-classic.json",
+      "sha256": "ac19f9c70a142e533522e35d3e34aa8ab138967d0b78c62e50cbeefa8145a79a",
+      "tags": [
+        "theme"
+      ]
+    },
+    {
+      "id": "aincrad-dark",
+      "type": "theme",
+      "name": "Dark Aincrad",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": null,
+      "preview": "previews/aincrad-dark.png",
+      "package": "packages/themes/aincrad-dark.json",
+      "sha256": "5ea5e8530786c6f07380e2ea0dc2d28e62cd6fbeb0c7bd35a81b0493601af75f",
+      "tags": [
+        "theme"
+      ]
+    },
+    {
+      "id": "alfheim",
+      "type": "theme",
+      "name": "Alfheim",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": null,
+      "preview": "previews/alfheim.png",
+      "package": "packages/themes/alfheim.json",
+      "sha256": "1bbd91353467fe3737b128bbfc657ebbab5a6fc6f674b81416a1b8069eb05dd5",
+      "tags": [
+        "theme"
+      ]
+    },
+    {
+      "id": "gun-gale",
+      "type": "theme",
+      "name": "Gun Gale",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": null,
+      "preview": "previews/gun-gale.png",
+      "package": "packages/themes/gun-gale.json",
+      "sha256": "6b52568abb551c377ce23af5eeb1b6d31ec0b78a1e94eda19ddf48db4a551a9b",
+      "tags": [
+        "theme"
+      ]
+    },
+    {
+      "id": "midnight-blue",
+      "type": "theme",
+      "name": "Midnight Blue",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": null,
+      "preview": "previews/midnight-blue.png",
+      "package": "packages/themes/midnight-blue.json",
+      "sha256": "56b0c6d8e00d8e33f1958992928449e2a557ada0659f7db31636ff7045c4b522",
+      "tags": [
+        "theme"
+      ]
+    },
+    {
+      "id": "underworld",
+      "type": "theme",
+      "name": "Underworld",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": null,
+      "preview": "previews/underworld.png",
+      "package": "packages/themes/underworld.json",
+      "sha256": "dc93e2246d69a642d39402213a8c2b09b08102768c94477ac44edb731b5a1e8a",
+      "tags": [
+        "theme"
+      ]
+    },
+    {
+      "id": "aincrad.focus-timer",
+      "type": "extension",
+      "name": "Focus Timer",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": "A 25-minute focus timer. Add its \u201cFocus\u201d menu to your launcher as a Dynamic list, and the Focus gauge widget to your desktop.",
+      "preview": "previews/aincrad.focus-timer.png",
+      "package": "packages/aincrad.focus-timer.aincrad",
+      "sha256": "9d58eedc149b39163cc8525707a22f8963329b1d3b8d1e1bc9132d19e9c6b31b",
+      "permissions": [],
+      "tags": [
+        "extension"
+      ]
+    },
+    {
+      "id": "aincrad.steam-mode",
+      "type": "extension",
+      "name": "Steam Mode",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": "Switches to the Gun Gale theme while Steam is open, and back to Aincrad Classic when it quits. Install the Gun Gale theme first.",
+      "preview": "previews/aincrad.steam-mode.png",
+      "package": "packages/aincrad.steam-mode.aincrad",
+      "sha256": "c6c193fc7c510cad3f596e767aec6d27015ac03fcbc9da60e9a345171b0b42f6",
+      "permissions": [],
+      "tags": [
+        "extension"
+      ]
+    },
+    {
+      "id": "aincrad.system-hp",
+      "type": "extension",
+      "name": "System HP",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": "Your Mac's free CPU as an SAO HP gauge, updated every 5 seconds. Add the \u201cHP gauge\u201d widget from the Widgets library.",
+      "preview": "previews/aincrad.system-hp.png",
+      "package": "packages/aincrad.system-hp.aincrad",
+      "sha256": "104caf3d5a604da9e148d41d57cdf62efbbad1460a59267b20dca7a512aa8d26",
+      "permissions": [],
+      "tags": [
+        "extension"
+      ]
+    },
+    {
+      "id": "aincrad.weather",
+      "type": "extension",
+      "name": "Weather",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": "Current temperature from Open-Meteo (no account needed), every 15 minutes. Open it in the Studio to change the latitude and longitude in the fetch block.",
+      "preview": "previews/aincrad.weather.png",
+      "package": "packages/aincrad.weather.aincrad",
+      "sha256": "d3b0124d010e19841ce27b64b511e5e512dca7d7bd712df9c421772b2e9c7479",
+      "permissions": [
+        "network"
+      ],
+      "tags": [
+        "extension"
+      ]
+    },
+    {
+      "id": "aincrad.welcome",
+      "type": "extension",
+      "name": "Welcome Message",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": "Greets you with the classic SAO message when AINCRAD starts, and counts how often you open the launcher.",
+      "preview": "previews/aincrad.welcome.png",
+      "package": "packages/aincrad.welcome.aincrad",
+      "sha256": "8699bfa5174bd48fa19c40896d395f2b3c22d60feae4f86ff94923885d03fa45",
+      "permissions": [],
+      "tags": [
+        "extension"
+      ]
+    }
+  ]
+}

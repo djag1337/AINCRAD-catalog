@@ -1,0 +1,4 @@
+{ "name": "Alfheim",
+  "colors": { "panel": "#F2FAF3F0", "panelText": "#2F4A35", "accent": "#3FBF6A", "iconBadge": "#3B6B48",
+              "circle": "#F3FBF4F0", "circleIcon": "#5E8F6B", "infoFooter": "#E1F2E5F5", "infoIcon": "#5E8F6B" },
+  "animation": { "preset": "gentle" } }

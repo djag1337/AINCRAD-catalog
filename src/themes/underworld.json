@@ -1,0 +1,7 @@
+{ "name": "Underworld",
+  "colors": { "panel": "#1B1830E8", "panelText": "#E6E2FF", "panelBorder": "#8FD3FF55", "hover": "#2A2548F5",
+              "accent": "#8FD3FF", "accentText": "#14122A", "iconBadge": "#8FD3FF", "iconGlyph": "#1B1830",
+              "circle": "#211D3AE8", "circleIcon": "#B9B2F0", "circleBorder": "#8FD3FF66", "infoFooter": "#141226F0",
+              "infoIcon": "#8FD3FF" },
+  "font": { "family": "Avenir Next Condensed" },
+  "effects": { "shine": 0.15, "selectedGlow": 18 } }

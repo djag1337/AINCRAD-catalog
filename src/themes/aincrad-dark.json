@@ -1,0 +1,5 @@
+{ "name": "Dark Aincrad",
+  "colors": { "panel": "#24272DE8", "panelText": "#E4E6EA", "panelBorder": "#FFFFFF33", "hover": "#3A3E46F2",
+              "iconBadge": "#E4E6EA", "iconGlyph": "#24272D", "circle": "#2A2D33E6", "circleIcon": "#C8CBD1",
+              "circleBorder": "#FFFFFF40", "infoFooter": "#1B1D22F0", "infoIcon": "#C8CBD1" },
+  "effects": { "shine": 0.12 } }

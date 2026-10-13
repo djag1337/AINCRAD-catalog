@@ -1,0 +1,109 @@
+{
+  "apiVersion": 1,
+  "author": "AINCRAD",
+  "description": "Your Mac's free CPU as an SAO HP gauge, updated every 5 seconds. Add the \u201cHP gauge\u201d widget from the Widgets library.",
+  "id": "aincrad.system-hp",
+  "name": "System HP",
+  "permissions": [],
+  "provides": {
+    "scripts": [
+      {
+        "steps": [
+          {
+            "fields": {
+              "name": "hp"
+            },
+            "inputs": {
+              "value": {
+                "fields": {},
+                "inputs": {
+                  "a": {
+                    "fields": {
+                      "value": "100"
+                    },
+                    "op": "literal"
+                  },
+                  "b": {
+                    "fields": {
+                      "reading": "CPU"
+                    },
+                    "inputs": {},
+                    "op": "sense.reading"
+                  }
+                },
+                "op": "op.sub"
+              }
+            },
+            "op": "var.set"
+          },
+          {
+            "fields": {},
+            "inputs": {
+              "name": {
+                "fields": {
+                  "value": "HP"
+                },
+                "op": "literal"
+              },
+              "percent": {
+                "fields": {
+                  "name": "hp"
+                },
+                "inputs": {},
+                "op": "var.get"
+              },
+              "text": {
+                "fields": {},
+                "inputs": {
+                  "a": {
+                    "fields": {
+                      "name": "hp"
+                    },
+                    "inputs": {},
+                    "op": "var.get"
+                  },
+                  "b": {
+                    "fields": {
+                      "value": " / 100"
+                    },
+                    "op": "literal"
+                  }
+                },
+                "op": "op.join"
+              }
+            },
+            "op": "looks.gauge"
+          }
+        ],
+        "trigger": {
+          "fields": {},
+          "inputs": {
+            "seconds": {
+              "fields": {
+                "value": "5"
+              },
+              "op": "literal"
+            }
+          },
+          "op": "timer.every"
+        }
+      }
+    ],
+    "widgets": [
+      {
+        "name": "HP gauge",
+        "widget": {
+          "height": 70,
+          "props": {
+            "label": "HP",
+            "show": "bar",
+            "source": "script:aincrad.system-hp/HP"
+          },
+          "type": "stat",
+          "width": 260
+        }
+      }
+    ]
+  },
+  "version": "1.0"
+}

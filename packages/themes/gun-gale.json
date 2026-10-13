@@ -1,0 +1,7 @@
+{ "name": "Gun Gale",
+  "colors": { "panel": "#1A1C1FE8", "panelText": "#D9DCE0", "panelBorder": "#FF3B3B55", "hover": "#2A2D31F5",
+              "accent": "#E0303A", "iconBadge": "#D9DCE0", "iconGlyph": "#1A1C1F", "circle": "#1E2024E8",
+              "circleIcon": "#C9CDD3", "circleBorder": "#E0303A88", "infoFooter": "#121316F0", "infoIcon": "#E0303A" },
+  "geometry": { "cornerRadius": 1, "bubbleRadius": 2 },
+  "effects": { "tilt": 6, "shine": 0.1 },
+  "animation": { "preset": "snappy" } }

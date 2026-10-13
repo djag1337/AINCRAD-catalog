@@ -1,0 +1,93 @@
+{
+  "apiVersion": 1,
+  "author": "AINCRAD",
+  "description": "Switches to the Gun Gale theme while Steam is open, and back to Aincrad Classic when it quits. Install the Gun Gale theme first.",
+  "id": "aincrad.steam-mode",
+  "name": "Steam Mode",
+  "permissions": [],
+  "provides": {
+    "scripts": [
+      {
+        "steps": [
+          {
+            "fields": {},
+            "inputs": {
+              "theme": {
+                "fields": {
+                  "value": "gun-gale"
+                },
+                "op": "literal"
+              }
+            },
+            "op": "looks.theme"
+          },
+          {
+            "fields": {},
+            "inputs": {
+              "text": {
+                "fields": {
+                  "value": "Link start! Gun Gale mode on."
+                },
+                "op": "literal"
+              }
+            },
+            "op": "looks.message"
+          }
+        ],
+        "trigger": {
+          "fields": {},
+          "inputs": {
+            "app": {
+              "fields": {
+                "value": "Steam"
+              },
+              "op": "literal"
+            }
+          },
+          "op": "app.launched"
+        }
+      },
+      {
+        "steps": [
+          {
+            "fields": {},
+            "inputs": {
+              "theme": {
+                "fields": {
+                  "value": "aincrad-classic"
+                },
+                "op": "literal"
+              }
+            },
+            "op": "looks.theme"
+          },
+          {
+            "fields": {},
+            "inputs": {
+              "text": {
+                "fields": {
+                  "value": "Back to Aincrad."
+                },
+                "op": "literal"
+              }
+            },
+            "op": "looks.message"
+          }
+        ],
+        "trigger": {
+          "fields": {},
+          "inputs": {
+            "app": {
+              "fields": {
+                "value": "Steam"
+              },
+              "op": "literal"
+            }
+          },
+          "op": "app.quit"
+        }
+      }
+    ]
+  },
+  "version": "1.0"
+}

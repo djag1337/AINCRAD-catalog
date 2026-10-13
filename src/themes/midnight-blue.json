@@ -1,0 +1,5 @@
+{ "name": "Midnight Blue",
+  "colors": { "panel": "#151C26E8", "panelText": "#DCE6F2", "panelBorder": "#3FA9F555", "hover": "#202B3AF5",
+              "accent": "#3FA9F5", "iconBadge": "#DCE6F2", "iconGlyph": "#151C26", "circle": "#18202BE8",
+              "circleIcon": "#A9BCD2", "circleBorder": "#3FA9F566", "infoFooter": "#0F151DF0", "infoIcon": "#3FA9F5" },
+  "effects": { "shine": 0.12 } }
