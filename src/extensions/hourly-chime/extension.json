@@ -1,0 +1,140 @@
+{
+  "apiVersion": 1,
+  "author": "AINCRAD",
+  "description": "An SAO message on the hour, every hour.",
+  "id": "aincrad.hourly-chime",
+  "name": "Hourly Chime",
+  "permissions": [],
+  "provides": {
+    "scripts": [
+      {
+        "steps": [
+          {
+            "body": [
+              {
+                "fields": {
+                  "name": "last"
+                },
+                "inputs": {
+                  "value": {
+                    "fields": {
+                      "part": "hour"
+                    },
+                    "inputs": {},
+                    "op": "sense.time"
+                  }
+                },
+                "op": "var.set"
+              },
+              {
+                "fields": {},
+                "inputs": {
+                  "text": {
+                    "fields": {},
+                    "inputs": {
+                      "a": {
+                        "fields": {},
+                        "inputs": {
+                          "a": {
+                            "fields": {
+                              "value": "It's "
+                            },
+                            "op": "literal"
+                          },
+                          "b": {
+                            "fields": {
+                              "part": "time"
+                            },
+                            "inputs": {},
+                            "op": "sense.time"
+                          }
+                        },
+                        "op": "op.join"
+                      },
+                      "b": {
+                        "fields": {
+                          "value": ". Keep climbing."
+                        },
+                        "op": "literal"
+                      }
+                    },
+                    "op": "op.join"
+                  }
+                },
+                "op": "looks.message"
+              }
+            ],
+            "fields": {},
+            "inputs": {
+              "condition": {
+                "fields": {},
+                "inputs": {
+                  "a": {
+                    "fields": {},
+                    "inputs": {
+                      "a": {
+                        "fields": {
+                          "part": "minute"
+                        },
+                        "inputs": {},
+                        "op": "sense.time"
+                      },
+                      "b": {
+                        "fields": {
+                          "value": "0"
+                        },
+                        "op": "literal"
+                      }
+                    },
+                    "op": "op.eq"
+                  },
+                  "b": {
+                    "fields": {},
+                    "inputs": {
+                      "a": {
+                        "fields": {},
+                        "inputs": {
+                          "a": {
+                            "fields": {
+                              "part": "hour"
+                            },
+                            "inputs": {},
+                            "op": "sense.time"
+                          },
+                          "b": {
+                            "fields": {
+                              "name": "last"
+                            },
+                            "inputs": {},
+                            "op": "var.get"
+                          }
+                        },
+                        "op": "op.eq"
+                      }
+                    },
+                    "op": "op.not"
+                  }
+                },
+                "op": "op.and"
+              }
+            },
+            "op": "control.if"
+          }
+        ],
+        "trigger": {
+          "fields": {},
+          "inputs": {
+            "seconds": {
+              "fields": {
+                "value": "20"
+              },
+              "op": "literal"
+            }
+          },
+          "op": "timer.every"
+        }
+      }
+    ]
+  },
+  "version": "1.0"
+}

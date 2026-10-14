@@ -1,0 +1,83 @@
+{
+  "apiVersion": 1,
+  "author": "AINCRAD",
+  "description": "Your everyday folders in one submenu: Home, Desktop, Documents, Downloads, iCloud Drive, Applications, Screenshots and the Trash.",
+  "id": "aincrad.quick-folders",
+  "name": "Quick Folders",
+  "permissions": [],
+  "provides": {
+    "menus": [
+      {
+        "id": "folders",
+        "items": [
+          {
+            "action": {
+              "target": "~",
+              "type": "open"
+            },
+            "icon": "sf:house.fill",
+            "name": "Home"
+          },
+          {
+            "action": {
+              "target": "~/Desktop",
+              "type": "open"
+            },
+            "icon": "sf:menubar.dock.rectangle",
+            "name": "Desktop"
+          },
+          {
+            "action": {
+              "target": "~/Documents",
+              "type": "open"
+            },
+            "icon": "sf:doc.fill",
+            "name": "Documents"
+          },
+          {
+            "action": {
+              "target": "~/Downloads",
+              "type": "open"
+            },
+            "icon": "sf:arrow.down.circle.fill",
+            "name": "Downloads"
+          },
+          {
+            "action": {
+              "target": "~/Library/Mobile Documents/com~apple~CloudDocs",
+              "type": "open"
+            },
+            "icon": "sf:icloud.fill",
+            "name": "iCloud Drive"
+          },
+          {
+            "action": {
+              "target": "/Applications",
+              "type": "open"
+            },
+            "icon": "sf:square.grid.3x3.fill",
+            "name": "Applications"
+          },
+          {
+            "action": {
+              "target": "/System/Applications/Utilities/Screenshot.app",
+              "type": "app"
+            },
+            "icon": "sf:camera.viewfinder",
+            "name": "Screenshot app"
+          },
+          {
+            "action": {
+              "target": "~/.Trash",
+              "type": "open"
+            },
+            "icon": "sf:trash.fill",
+            "name": "Trash"
+          }
+        ],
+        "name": "Quick Folders"
+      }
+    ]
+  },
+  "version": "1.0"
+}

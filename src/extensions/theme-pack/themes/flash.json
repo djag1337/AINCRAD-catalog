@@ -1,0 +1,17 @@
+{
+  "name": "The Flash",
+  "colors": {
+    "panel": "#FFFFFFF2",
+    "panelText": "#3A2A2A",
+    "panelBorder": "#C8303855",
+    "hover": "#FFF1F1F8",
+    "accent": "#D7263D",
+    "iconBadge": "#3A2A2A",
+    "iconGlyph": "#FFFFFF",
+    "circle": "#FFFFFFF2",
+    "circleIcon": "#6A5050",
+    "circleBorder": "#D7263D88",
+    "infoFooter": "#F6ECECF5",
+    "infoIcon": "#D7263D"
+  }
+}

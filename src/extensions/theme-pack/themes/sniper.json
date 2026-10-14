@@ -1,0 +1,23 @@
+{
+  "name": "Sniper",
+  "colors": {
+    "panel": "#16201FEE",
+    "panelText": "#D7EFEA",
+    "panelBorder": "#3CC8B455",
+    "hover": "#1F2E2CF5",
+    "accent": "#3CC8B4",
+    "iconBadge": "#D7EFEA",
+    "iconGlyph": "#16201F",
+    "circle": "#1A2624EE",
+    "circleIcon": "#B9DAD4",
+    "circleBorder": "#3CC8B488",
+    "infoFooter": "#101817F0",
+    "infoIcon": "#3CC8B4"
+  },
+  "geometry": {
+    "cornerRadius": 2
+  },
+  "effects": {
+    "tilt": 8
+  }
+}

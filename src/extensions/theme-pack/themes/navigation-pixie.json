@@ -1,0 +1,20 @@
+{
+  "name": "Navigation Pixie",
+  "colors": {
+    "panel": "#FFF7FBF2",
+    "panelText": "#4A3A46",
+    "panelBorder": "#F28CC055",
+    "hover": "#FFEAF5F8",
+    "accent": "#EE7DB8",
+    "iconBadge": "#4A3A46",
+    "iconGlyph": "#FFFFFF",
+    "circle": "#FFF7FBF2",
+    "circleIcon": "#7A6274",
+    "circleBorder": "#EE7DB888",
+    "infoFooter": "#FBEAF3F5",
+    "infoIcon": "#EE7DB8"
+  },
+  "animation": {
+    "preset": "gentle"
+  }
+}

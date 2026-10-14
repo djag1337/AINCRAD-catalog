@@ -88,6 +88,66 @@
       ]
     },
     {
+      "id": "aincrad.battle-mode",
+      "type": "extension",
+      "name": "Battle Mode",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": "Hides your desktop widgets while Steam, Heroic or Prism Launcher is open, and brings them back when it quits.",
+      "preview": "previews/aincrad.battle-mode.png",
+      "package": "packages/aincrad.battle-mode.aincrad",
+      "sha256": "1db5c1f45d680e982be0503a672cba83fae4f825292283950279f92069ff4c53",
+      "permissions": [],
+      "tags": [
+        "extension"
+      ]
+    },
+    {
+      "id": "aincrad.dev-hub",
+      "type": "extension",
+      "name": "Developer Hub",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": "Tools and pages developers reach for: Terminal, Activity Monitor, Console, local servers, GitHub, Stack Overflow and Apple's docs.",
+      "preview": "previews/aincrad.dev-hub.png",
+      "package": "packages/aincrad.dev-hub.aincrad",
+      "sha256": "dcd6b68571a37600ff83944ba177293cb40ccb5c1d964fec890f1dd224bb0b3f",
+      "permissions": [],
+      "tags": [
+        "extension"
+      ]
+    },
+    {
+      "id": "aincrad.dice",
+      "type": "extension",
+      "name": "Dice & Coins",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": "Roll a d6 or d20, or flip a coin, from the launcher.",
+      "preview": "previews/aincrad.dice.png",
+      "package": "packages/aincrad.dice.aincrad",
+      "sha256": "8948a237b23b2b74a6ac85d464b48e37763847a13a0d12e26affa24a4b55bedd",
+      "permissions": [],
+      "tags": [
+        "extension"
+      ]
+    },
+    {
+      "id": "aincrad.floor-counter",
+      "type": "extension",
+      "name": "Floor Counter",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": "Every hour your Mac stays up clears a floor of Aincrad. A gauge shows the floor out of 100.",
+      "preview": "previews/aincrad.floor-counter.png",
+      "package": "packages/aincrad.floor-counter.aincrad",
+      "sha256": "71da9f3f3b58385a93dc883363b2b3967d0f81eaf80de33df75ba4142ab4c739",
+      "permissions": [],
+      "tags": [
+        "extension"
+      ]
+    },
+    {
       "id": "aincrad.focus-timer",
       "type": "extension",
       "name": "Focus Timer",
@@ -96,7 +156,142 @@
       "description": "A 25-minute focus timer. Add its \u201cFocus\u201d menu to your launcher as a Dynamic list, and the Focus gauge widget to your desktop.",
       "preview": "previews/aincrad.focus-timer.png",
       "package": "packages/aincrad.focus-timer.aincrad",
-      "sha256": "9d58eedc149b39163cc8525707a22f8963329b1d3b8d1e1bc9132d19e9c6b31b",
+      "sha256": "82ed1af4db97efb801b1e8fb8cef3eba861b0b5f8bae14868c6095a1f47e44e9",
+      "permissions": [],
+      "tags": [
+        "extension"
+      ]
+    },
+    {
+      "id": "aincrad.greeting",
+      "type": "extension",
+      "name": "Time Greeting",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": "Says good morning, afternoon or evening when AINCRAD starts.",
+      "preview": "previews/aincrad.greeting.png",
+      "package": "packages/aincrad.greeting.aincrad",
+      "sha256": "248c8f7d6dc6eefee95f2f02b6170c68fddcf1fe146706fa6dbaa07031df0b9e",
+      "permissions": [],
+      "tags": [
+        "extension"
+      ]
+    },
+    {
+      "id": "aincrad.hourly-chime",
+      "type": "extension",
+      "name": "Hourly Chime",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": "An SAO message on the hour, every hour.",
+      "preview": "previews/aincrad.hourly-chime.png",
+      "package": "packages/aincrad.hourly-chime.aincrad",
+      "sha256": "9aaeb5bebad54eda5140d69b1652ff1b19c5f5d5680b156485179470cd7652ed",
+      "permissions": [],
+      "tags": [
+        "extension"
+      ]
+    },
+    {
+      "id": "aincrad.low-hp",
+      "type": "extension",
+      "name": "Low HP Warning",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": "Warns once when the battery drops below 20% (does nothing on Macs without a battery).",
+      "preview": "previews/aincrad.low-hp.png",
+      "package": "packages/aincrad.low-hp.aincrad",
+      "sha256": "3f4bc2f374d136afb212507d2e85add424e78adc86d257dfa27ce512a2e66841",
+      "permissions": [],
+      "tags": [
+        "extension"
+      ]
+    },
+    {
+      "id": "aincrad.media-hub",
+      "type": "extension",
+      "name": "Media Hub",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": "Music and video in one place: the Music app, Spotify, YouTube Music, SoundCloud, Twitch and Crunchyroll.",
+      "preview": "previews/aincrad.media-hub.png",
+      "package": "packages/aincrad.media-hub.aincrad",
+      "sha256": "f56069d175b77fc92ec7ddb08cfde0f0c17f068b53df16516cf2b6a8a6a6193c",
+      "permissions": [],
+      "tags": [
+        "extension"
+      ]
+    },
+    {
+      "id": "aincrad.player-stats",
+      "type": "extension",
+      "name": "Player Stats",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": "MP (free memory) and Stamina (free disk) gauges to go with System HP, updated every 10 seconds. Add them from the Widgets library.",
+      "preview": "previews/aincrad.player-stats.png",
+      "package": "packages/aincrad.player-stats.aincrad",
+      "sha256": "efd08c7e93d05e9485fc4dda3b29700ad7fd88ae2fe71f11ebadf4012d32cce0",
+      "permissions": [],
+      "tags": [
+        "extension"
+      ]
+    },
+    {
+      "id": "aincrad.quick-folders",
+      "type": "extension",
+      "name": "Quick Folders",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": "Your everyday folders in one submenu: Home, Desktop, Documents, Downloads, iCloud Drive, Applications, Screenshots and the Trash.",
+      "preview": "previews/aincrad.quick-folders.png",
+      "package": "packages/aincrad.quick-folders.aincrad",
+      "sha256": "62187da8a120491e2f27132e7103860a9a0bdfd629c6ada15b1a732e2689fd4a",
+      "permissions": [],
+      "tags": [
+        "extension"
+      ]
+    },
+    {
+      "id": "aincrad.rest-point",
+      "type": "extension",
+      "name": "Rest Point",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": "A break reminder every 50 minutes: stand up, stretch, drink some water.",
+      "preview": "previews/aincrad.rest-point.png",
+      "package": "packages/aincrad.rest-point.aincrad",
+      "sha256": "9d8d8f69e8774b1e5b90eb834cf9f5aed4d1bf684986cae94f819d4ec0b9d814",
+      "permissions": [],
+      "tags": [
+        "extension"
+      ]
+    },
+    {
+      "id": "aincrad.sao-quotes",
+      "type": "extension",
+      "name": "Motivation",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": "A menu item that shows a random line of SAO-style encouragement.",
+      "preview": "previews/aincrad.sao-quotes.png",
+      "package": "packages/aincrad.sao-quotes.aincrad",
+      "sha256": "3387a63b7d96b92e12e3beba9f37e4976fd71334de88f9a792d75a486dc8a26f",
+      "permissions": [],
+      "tags": [
+        "extension"
+      ]
+    },
+    {
+      "id": "aincrad.settings-panes",
+      "type": "extension",
+      "name": "Settings Panes",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": "Jump straight to the System Settings page you want. Its menu appears under Command Center \u203a Plugins.",
+      "preview": "previews/aincrad.settings-panes.png",
+      "package": "packages/aincrad.settings-panes.aincrad",
+      "sha256": "cba0942a77cdf60ac3883491dfbd100666dbc7088cf9fddab6ca74e03dc63014",
       "permissions": [],
       "tags": [
         "extension"
@@ -111,7 +306,22 @@
       "description": "Switches to the Gun Gale theme while Steam is open, and back to Aincrad Classic when it quits. Install the Gun Gale theme first.",
       "preview": "previews/aincrad.steam-mode.png",
       "package": "packages/aincrad.steam-mode.aincrad",
-      "sha256": "c6c193fc7c510cad3f596e767aec6d27015ac03fcbc9da60e9a345171b0b42f6",
+      "sha256": "794a245d496130dd33aadd559a7689d6fe5ac980d09efea2d35255fafb3eca1d",
+      "permissions": [],
+      "tags": [
+        "extension"
+      ]
+    },
+    {
+      "id": "aincrad.storage-alert",
+      "type": "extension",
+      "name": "Storage Alert",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": "Warns once when your disk is more than 90% full, and again if it fills up after you clear space.",
+      "preview": "previews/aincrad.storage-alert.png",
+      "package": "packages/aincrad.storage-alert.aincrad",
+      "sha256": "4e833bbb887e97507a444918fd66cd27ee297d31b90e9bb01bcb9544e9624bd3",
       "permissions": [],
       "tags": [
         "extension"
@@ -126,7 +336,22 @@
       "description": "Your Mac's free CPU as an SAO HP gauge, updated every 5 seconds. Add the \u201cHP gauge\u201d widget from the Widgets library.",
       "preview": "previews/aincrad.system-hp.png",
       "package": "packages/aincrad.system-hp.aincrad",
-      "sha256": "104caf3d5a604da9e148d41d57cdf62efbbad1460a59267b20dca7a512aa8d26",
+      "sha256": "bb463dfdaced4499e895c8ef26f2eea9c925674fa7201a19fffd5469471fbe79",
+      "permissions": [],
+      "tags": [
+        "extension"
+      ]
+    },
+    {
+      "id": "aincrad.theme-pack",
+      "type": "extension",
+      "name": "Swordsman Theme Pack",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": "Four themes: Black Swordsman (dark, blue), The Flash (white, crimson), Sniper (teal) and Navigation Pixie (pink). Enable, then Install Themes.",
+      "preview": "previews/aincrad.theme-pack.png",
+      "package": "packages/aincrad.theme-pack.aincrad",
+      "sha256": "a04bf0aa7fe415faa424b4592b56d1989bd92f737c277bc790e67bc2bdd0fe85",
       "permissions": [],
       "tags": [
         "extension"
@@ -141,10 +366,25 @@
       "description": "Current temperature from Open-Meteo (no account needed), every 15 minutes. Open it in the Studio to change the latitude and longitude in the fetch block.",
       "preview": "previews/aincrad.weather.png",
       "package": "packages/aincrad.weather.aincrad",
-      "sha256": "d3b0124d010e19841ce27b64b511e5e512dca7d7bd712df9c421772b2e9c7479",
+      "sha256": "b682f0dae2afcf992f71ec8eee4445193352dc90b0ad731a73a138ec66b3a0d6",
       "permissions": [
         "network"
       ],
+      "tags": [
+        "extension"
+      ]
+    },
+    {
+      "id": "aincrad.web-links",
+      "type": "extension",
+      "name": "Web Quick Links",
+      "author": "AINCRAD",
+      "version": "1.0",
+      "description": "One-click sites: mail, calendar, drive, YouTube, Reddit, GitHub, ChatGPT, Claude, Twitch and Discord.",
+      "preview": "previews/aincrad.web-links.png",
+      "package": "packages/aincrad.web-links.aincrad",
+      "sha256": "26d22f61943a8b2f67a51187f9630302bf0ce667d707cf0294a36ed4b18f1a64",
+      "permissions": [],
       "tags": [
         "extension"
       ]
@@ -158,7 +398,7 @@
       "description": "Greets you with the classic SAO message when AINCRAD starts, and counts how often you open the launcher.",
       "preview": "previews/aincrad.welcome.png",
       "package": "packages/aincrad.welcome.aincrad",
-      "sha256": "8699bfa5174bd48fa19c40896d395f2b3c22d60feae4f86ff94923885d03fa45",
+      "sha256": "30a800d8626dd4e0c5671c883fe94a1d77f557aa8bd92afd4332881bf92f5dc6",
       "permissions": [],
       "tags": [
         "extension"

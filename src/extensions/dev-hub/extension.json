@@ -1,0 +1,83 @@
+{
+  "apiVersion": 1,
+  "author": "AINCRAD",
+  "description": "Tools and pages developers reach for: Terminal, Activity Monitor, Console, local servers, GitHub, Stack Overflow and Apple's docs.",
+  "id": "aincrad.dev-hub",
+  "name": "Developer Hub",
+  "permissions": [],
+  "provides": {
+    "menus": [
+      {
+        "id": "dev",
+        "items": [
+          {
+            "action": {
+              "target": "/System/Applications/Utilities/Terminal.app",
+              "type": "app"
+            },
+            "icon": "sf:terminal.fill",
+            "name": "Terminal"
+          },
+          {
+            "action": {
+              "target": "/System/Applications/Utilities/Activity Monitor.app",
+              "type": "app"
+            },
+            "icon": "sf:waveform.path.ecg",
+            "name": "Activity Monitor"
+          },
+          {
+            "action": {
+              "target": "/System/Applications/Utilities/Console.app",
+              "type": "app"
+            },
+            "icon": "sf:list.bullet.rectangle.fill",
+            "name": "Console"
+          },
+          {
+            "action": {
+              "target": "http://localhost:3000",
+              "type": "url"
+            },
+            "icon": "sf:server.rack",
+            "name": "localhost:3000"
+          },
+          {
+            "action": {
+              "target": "http://localhost:8080",
+              "type": "url"
+            },
+            "icon": "sf:server.rack",
+            "name": "localhost:8080"
+          },
+          {
+            "action": {
+              "target": "https://github.com",
+              "type": "url"
+            },
+            "icon": "sf:chevron.left.forwardslash.chevron.right",
+            "name": "GitHub"
+          },
+          {
+            "action": {
+              "target": "https://stackoverflow.com",
+              "type": "url"
+            },
+            "icon": "sf:questionmark.bubble.fill",
+            "name": "Stack Overflow"
+          },
+          {
+            "action": {
+              "target": "https://developer.apple.com/documentation",
+              "type": "url"
+            },
+            "icon": "sf:book.fill",
+            "name": "Apple Developer Docs"
+          }
+        ],
+        "name": "Developer Hub"
+      }
+    ]
+  },
+  "version": "1.0"
+}

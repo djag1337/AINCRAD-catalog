@@ -1,0 +1,67 @@
+{
+  "apiVersion": 1,
+  "author": "AINCRAD",
+  "description": "Music and video in one place: the Music app, Spotify, YouTube Music, SoundCloud, Twitch and Crunchyroll.",
+  "id": "aincrad.media-hub",
+  "name": "Media Hub",
+  "permissions": [],
+  "provides": {
+    "menus": [
+      {
+        "id": "media",
+        "items": [
+          {
+            "action": {
+              "target": "/System/Applications/Music.app",
+              "type": "app"
+            },
+            "icon": "sf:music.note",
+            "name": "Music"
+          },
+          {
+            "action": {
+              "target": "https://open.spotify.com",
+              "type": "url"
+            },
+            "icon": "sf:music.note.list",
+            "name": "Spotify (web)"
+          },
+          {
+            "action": {
+              "target": "https://music.youtube.com",
+              "type": "url"
+            },
+            "icon": "sf:play.circle.fill",
+            "name": "YouTube Music"
+          },
+          {
+            "action": {
+              "target": "https://soundcloud.com",
+              "type": "url"
+            },
+            "icon": "sf:cloud.fill",
+            "name": "SoundCloud"
+          },
+          {
+            "action": {
+              "target": "https://www.twitch.tv",
+              "type": "url"
+            },
+            "icon": "sf:tv.fill",
+            "name": "Twitch"
+          },
+          {
+            "action": {
+              "target": "https://www.crunchyroll.com",
+              "type": "url"
+            },
+            "icon": "sf:film.fill",
+            "name": "Crunchyroll"
+          }
+        ],
+        "name": "Media Hub"
+      }
+    ]
+  },
+  "version": "1.0"
+}

@@ -1,0 +1,253 @@
+{
+  "apiVersion": 1,
+  "author": "AINCRAD",
+  "description": "Roll a d6 or d20, or flip a coin, from the launcher.",
+  "id": "aincrad.dice",
+  "name": "Dice & Coins",
+  "permissions": [],
+  "provides": {
+    "menus": [
+      {
+        "id": "dice",
+        "items": [
+          {
+            "action": {
+              "target": "none",
+              "type": "builtin"
+            },
+            "icon": "sf:dice.fill",
+            "name": "Roll a d6"
+          },
+          {
+            "action": {
+              "target": "none",
+              "type": "builtin"
+            },
+            "icon": "sf:die.face.5.fill",
+            "name": "Roll a d20"
+          },
+          {
+            "action": {
+              "target": "none",
+              "type": "builtin"
+            },
+            "icon": "sf:circle.circle.fill",
+            "name": "Flip a coin"
+          }
+        ],
+        "name": "Dice & Coins"
+      }
+    ],
+    "scripts": [
+      {
+        "steps": [
+          {
+            "fields": {},
+            "inputs": {
+              "text": {
+                "fields": {},
+                "inputs": {
+                  "a": {
+                    "fields": {},
+                    "inputs": {
+                      "a": {
+                        "fields": {
+                          "value": "You rolled "
+                        },
+                        "op": "literal"
+                      },
+                      "b": {
+                        "fields": {},
+                        "inputs": {
+                          "a": {
+                            "fields": {
+                              "value": "1"
+                            },
+                            "op": "literal"
+                          },
+                          "b": {
+                            "fields": {
+                              "value": "6"
+                            },
+                            "op": "literal"
+                          }
+                        },
+                        "op": "op.random"
+                      }
+                    },
+                    "op": "op.join"
+                  },
+                  "b": {
+                    "fields": {
+                      "value": "."
+                    },
+                    "op": "literal"
+                  }
+                },
+                "op": "op.join"
+              }
+            },
+            "op": "looks.message"
+          }
+        ],
+        "trigger": {
+          "fields": {},
+          "inputs": {
+            "name": {
+              "fields": {
+                "value": "Roll a d6"
+              },
+              "op": "literal"
+            }
+          },
+          "op": "item.chosen"
+        }
+      },
+      {
+        "steps": [
+          {
+            "fields": {},
+            "inputs": {
+              "text": {
+                "fields": {},
+                "inputs": {
+                  "a": {
+                    "fields": {},
+                    "inputs": {
+                      "a": {
+                        "fields": {
+                          "value": "d20: "
+                        },
+                        "op": "literal"
+                      },
+                      "b": {
+                        "fields": {},
+                        "inputs": {
+                          "a": {
+                            "fields": {
+                              "value": "1"
+                            },
+                            "op": "literal"
+                          },
+                          "b": {
+                            "fields": {
+                              "value": "20"
+                            },
+                            "op": "literal"
+                          }
+                        },
+                        "op": "op.random"
+                      }
+                    },
+                    "op": "op.join"
+                  },
+                  "b": {
+                    "fields": {
+                      "value": "."
+                    },
+                    "op": "literal"
+                  }
+                },
+                "op": "op.join"
+              }
+            },
+            "op": "looks.message"
+          }
+        ],
+        "trigger": {
+          "fields": {},
+          "inputs": {
+            "name": {
+              "fields": {
+                "value": "Roll a d20"
+              },
+              "op": "literal"
+            }
+          },
+          "op": "item.chosen"
+        }
+      },
+      {
+        "steps": [
+          {
+            "body": [
+              {
+                "fields": {},
+                "inputs": {
+                  "text": {
+                    "fields": {
+                      "value": "Heads."
+                    },
+                    "op": "literal"
+                  }
+                },
+                "op": "looks.message"
+              }
+            ],
+            "elseBody": [
+              {
+                "fields": {},
+                "inputs": {
+                  "text": {
+                    "fields": {
+                      "value": "Tails."
+                    },
+                    "op": "literal"
+                  }
+                },
+                "op": "looks.message"
+              }
+            ],
+            "fields": {},
+            "inputs": {
+              "condition": {
+                "fields": {},
+                "inputs": {
+                  "a": {
+                    "fields": {},
+                    "inputs": {
+                      "a": {
+                        "fields": {
+                          "value": "1"
+                        },
+                        "op": "literal"
+                      },
+                      "b": {
+                        "fields": {
+                          "value": "2"
+                        },
+                        "op": "literal"
+                      }
+                    },
+                    "op": "op.random"
+                  },
+                  "b": {
+                    "fields": {
+                      "value": "1"
+                    },
+                    "op": "literal"
+                  }
+                },
+                "op": "op.eq"
+              }
+            },
+            "op": "control.ifElse"
+          }
+        ],
+        "trigger": {
+          "fields": {},
+          "inputs": {
+            "name": {
+              "fields": {
+                "value": "Flip a coin"
+              },
+              "op": "literal"
+            }
+          },
+          "op": "item.chosen"
+        }
+      }
+    ]
+  },
+  "version": "1.0"
+}

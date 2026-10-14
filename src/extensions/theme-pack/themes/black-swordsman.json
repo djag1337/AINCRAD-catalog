@@ -1,0 +1,21 @@
+{
+  "name": "Black Swordsman",
+  "colors": {
+    "panel": "#141518EE",
+    "panelText": "#E6E8EC",
+    "panelBorder": "#5A6070AA",
+    "hover": "#24262CF5",
+    "accent": "#7FA7FF",
+    "iconBadge": "#E6E8EC",
+    "iconGlyph": "#141518",
+    "circle": "#1A1C20EE",
+    "circleIcon": "#C9CED8",
+    "circleBorder": "#7FA7FF88",
+    "infoFooter": "#0E0F12F0",
+    "infoIcon": "#7FA7FF"
+  },
+  "effects": {
+    "tilt": 10,
+    "shine": 0.12
+  }
+}

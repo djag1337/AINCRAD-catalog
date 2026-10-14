@@ -1,0 +1,171 @@
+{
+  "apiVersion": 1,
+  "author": "AINCRAD",
+  "description": "Warns once when your disk is more than 90% full, and again if it fills up after you clear space.",
+  "id": "aincrad.storage-alert",
+  "name": "Storage Alert",
+  "permissions": [],
+  "provides": {
+    "scripts": [
+      {
+        "steps": [
+          {
+            "fields": {
+              "name": "disk"
+            },
+            "inputs": {
+              "value": {
+                "fields": {
+                  "reading": "disk"
+                },
+                "inputs": {},
+                "op": "sense.reading"
+              }
+            },
+            "op": "var.set"
+          },
+          {
+            "body": [
+              {
+                "body": [
+                  {
+                    "fields": {},
+                    "inputs": {
+                      "text": {
+                        "fields": {},
+                        "inputs": {
+                          "a": {
+                            "fields": {},
+                            "inputs": {
+                              "a": {
+                                "fields": {
+                                  "value": "Inventory almost full: disk "
+                                },
+                                "op": "literal"
+                              },
+                              "b": {
+                                "fields": {
+                                  "name": "disk"
+                                },
+                                "inputs": {},
+                                "op": "var.get"
+                              }
+                            },
+                            "op": "op.join"
+                          },
+                          "b": {
+                            "fields": {
+                              "value": "% used."
+                            },
+                            "op": "literal"
+                          }
+                        },
+                        "op": "op.join"
+                      }
+                    },
+                    "op": "looks.message"
+                  },
+                  {
+                    "fields": {
+                      "name": "warned"
+                    },
+                    "inputs": {
+                      "value": {
+                        "fields": {
+                          "value": "1"
+                        },
+                        "op": "literal"
+                      }
+                    },
+                    "op": "var.set"
+                  }
+                ],
+                "fields": {},
+                "inputs": {
+                  "condition": {
+                    "fields": {},
+                    "inputs": {
+                      "a": {
+                        "fields": {},
+                        "inputs": {
+                          "a": {
+                            "fields": {
+                              "name": "warned"
+                            },
+                            "inputs": {},
+                            "op": "var.get"
+                          },
+                          "b": {
+                            "fields": {
+                              "value": "1"
+                            },
+                            "op": "literal"
+                          }
+                        },
+                        "op": "op.eq"
+                      }
+                    },
+                    "op": "op.not"
+                  }
+                },
+                "op": "control.if"
+              }
+            ],
+            "elseBody": [
+              {
+                "fields": {
+                  "name": "warned"
+                },
+                "inputs": {
+                  "value": {
+                    "fields": {
+                      "value": "0"
+                    },
+                    "op": "literal"
+                  }
+                },
+                "op": "var.set"
+              }
+            ],
+            "fields": {},
+            "inputs": {
+              "condition": {
+                "fields": {},
+                "inputs": {
+                  "a": {
+                    "fields": {
+                      "name": "disk"
+                    },
+                    "inputs": {},
+                    "op": "var.get"
+                  },
+                  "b": {
+                    "fields": {
+                      "value": "90"
+                    },
+                    "op": "literal"
+                  }
+                },
+                "op": "op.gt"
+              }
+            },
+            "op": "control.ifElse"
+          }
+        ],
+        "trigger": {
+          "fields": {},
+          "inputs": {
+            "seconds": {
+              "fields": {
+                "value": "600"
+              },
+              "op": "literal"
+            }
+          },
+          "op": "timer.every"
+        }
+      }
+    ]
+  },
+  "version": "1.0"
+}

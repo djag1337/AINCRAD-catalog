@@ -1,0 +1,187 @@
+{
+  "apiVersion": 1,
+  "author": "AINCRAD",
+  "description": "MP (free memory) and Stamina (free disk) gauges to go with System HP, updated every 10 seconds. Add them from the Widgets library.",
+  "id": "aincrad.player-stats",
+  "name": "Player Stats",
+  "permissions": [],
+  "provides": {
+    "scripts": [
+      {
+        "steps": [
+          {
+            "fields": {
+              "name": "mp"
+            },
+            "inputs": {
+              "value": {
+                "fields": {},
+                "inputs": {
+                  "a": {
+                    "fields": {
+                      "value": "100"
+                    },
+                    "op": "literal"
+                  },
+                  "b": {
+                    "fields": {
+                      "reading": "memory"
+                    },
+                    "inputs": {},
+                    "op": "sense.reading"
+                  }
+                },
+                "op": "op.sub"
+              }
+            },
+            "op": "var.set"
+          },
+          {
+            "fields": {},
+            "inputs": {
+              "name": {
+                "fields": {
+                  "value": "MP"
+                },
+                "op": "literal"
+              },
+              "percent": {
+                "fields": {
+                  "name": "mp"
+                },
+                "inputs": {},
+                "op": "var.get"
+              },
+              "text": {
+                "fields": {},
+                "inputs": {
+                  "a": {
+                    "fields": {
+                      "name": "mp"
+                    },
+                    "inputs": {},
+                    "op": "var.get"
+                  },
+                  "b": {
+                    "fields": {
+                      "value": " / 100"
+                    },
+                    "op": "literal"
+                  }
+                },
+                "op": "op.join"
+              }
+            },
+            "op": "looks.gauge"
+          },
+          {
+            "fields": {
+              "name": "stamina"
+            },
+            "inputs": {
+              "value": {
+                "fields": {},
+                "inputs": {
+                  "a": {
+                    "fields": {
+                      "value": "100"
+                    },
+                    "op": "literal"
+                  },
+                  "b": {
+                    "fields": {
+                      "reading": "disk"
+                    },
+                    "inputs": {},
+                    "op": "sense.reading"
+                  }
+                },
+                "op": "op.sub"
+              }
+            },
+            "op": "var.set"
+          },
+          {
+            "fields": {},
+            "inputs": {
+              "name": {
+                "fields": {
+                  "value": "Stamina"
+                },
+                "op": "literal"
+              },
+              "percent": {
+                "fields": {
+                  "name": "stamina"
+                },
+                "inputs": {},
+                "op": "var.get"
+              },
+              "text": {
+                "fields": {},
+                "inputs": {
+                  "a": {
+                    "fields": {
+                      "name": "stamina"
+                    },
+                    "inputs": {},
+                    "op": "var.get"
+                  },
+                  "b": {
+                    "fields": {
+                      "value": "% free"
+                    },
+                    "op": "literal"
+                  }
+                },
+                "op": "op.join"
+              }
+            },
+            "op": "looks.gauge"
+          }
+        ],
+        "trigger": {
+          "fields": {},
+          "inputs": {
+            "seconds": {
+              "fields": {
+                "value": "10"
+              },
+              "op": "literal"
+            }
+          },
+          "op": "timer.every"
+        }
+      }
+    ],
+    "widgets": [
+      {
+        "name": "MP gauge (memory)",
+        "widget": {
+          "height": 70,
+          "props": {
+            "label": "MP",
+            "show": "bar",
+            "source": "script:aincrad.player-stats/MP"
+          },
+          "type": "stat",
+          "width": 260
+        }
+      },
+      {
+        "name": "Stamina gauge (disk)",
+        "widget": {
+          "height": 70,
+          "props": {
+            "label": "Stamina",
+            "show": "bar",
+            "source": "script:aincrad.player-stats/Stamina"
+          },
+          "type": "stat",
+          "width": 260
+        }
+      }
+    ]
+  },
+  "version": "1.0"
+}

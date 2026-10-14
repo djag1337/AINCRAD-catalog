@@ -1,0 +1,41 @@
+{
+  "apiVersion": 1,
+  "author": "AINCRAD",
+  "description": "A break reminder every 50 minutes: stand up, stretch, drink some water.",
+  "id": "aincrad.rest-point",
+  "name": "Rest Point",
+  "permissions": [],
+  "provides": {
+    "scripts": [
+      {
+        "steps": [
+          {
+            "fields": {},
+            "inputs": {
+              "text": {
+                "fields": {
+                  "value": "Rest point reached. Stand up, stretch and drink some water."
+                },
+                "op": "literal"
+              }
+            },
+            "op": "looks.message"
+          }
+        ],
+        "trigger": {
+          "fields": {},
+          "inputs": {
+            "seconds": {
+              "fields": {
+                "value": "3000"
+              },
+              "op": "literal"
+            }
+          },
+          "op": "timer.every"
+        }
+      }
+    ]
+  },
+  "version": "1.0"
+}

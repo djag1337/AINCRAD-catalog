@@ -1,0 +1,139 @@
+{
+  "apiVersion": 1,
+  "author": "AINCRAD",
+  "description": "Jump straight to the System Settings page you want. Its menu appears under Command Center › Plugins.",
+  "id": "aincrad.settings-panes",
+  "name": "Settings Panes",
+  "permissions": [],
+  "provides": {
+    "menus": [
+      {
+        "id": "panes",
+        "items": [
+          {
+            "action": {
+              "target": "x-apple.systempreferences:com.apple.wifi-settings-extension",
+              "type": "url"
+            },
+            "icon": "sf:wifi",
+            "name": "Wi-Fi"
+          },
+          {
+            "action": {
+              "target": "x-apple.systempreferences:com.apple.BluetoothSettings",
+              "type": "url"
+            },
+            "icon": "sf:dot.radiowaves.left.and.right",
+            "name": "Bluetooth"
+          },
+          {
+            "action": {
+              "target": "x-apple.systempreferences:com.apple.Network-Settings.extension",
+              "type": "url"
+            },
+            "icon": "sf:network",
+            "name": "Network"
+          },
+          {
+            "action": {
+              "target": "x-apple.systempreferences:com.apple.Displays-Settings.extension",
+              "type": "url"
+            },
+            "icon": "sf:display.2",
+            "name": "Displays"
+          },
+          {
+            "action": {
+              "target": "x-apple.systempreferences:com.apple.Sound-Settings.extension",
+              "type": "url"
+            },
+            "icon": "sf:speaker.wave.2.fill",
+            "name": "Sound"
+          },
+          {
+            "action": {
+              "target": "x-apple.systempreferences:com.apple.Desktop-Settings.extension",
+              "type": "url"
+            },
+            "icon": "sf:dock.rectangle",
+            "name": "Desktop & Dock"
+          },
+          {
+            "action": {
+              "target": "x-apple.systempreferences:com.apple.Wallpaper-Settings.extension",
+              "type": "url"
+            },
+            "icon": "sf:photo.fill",
+            "name": "Wallpaper"
+          },
+          {
+            "action": {
+              "target": "x-apple.systempreferences:com.apple.Appearance-Settings.extension",
+              "type": "url"
+            },
+            "icon": "sf:circle.lefthalf.filled",
+            "name": "Appearance"
+          },
+          {
+            "action": {
+              "target": "x-apple.systempreferences:com.apple.Keyboard-Settings.extension",
+              "type": "url"
+            },
+            "icon": "sf:keyboard.fill",
+            "name": "Keyboard"
+          },
+          {
+            "action": {
+              "target": "x-apple.systempreferences:com.apple.Mouse-Settings.extension",
+              "type": "url"
+            },
+            "icon": "sf:computermouse.fill",
+            "name": "Mouse"
+          },
+          {
+            "action": {
+              "target": "x-apple.systempreferences:com.apple.Notifications-Settings.extension",
+              "type": "url"
+            },
+            "icon": "sf:bell.badge.fill",
+            "name": "Notifications"
+          },
+          {
+            "action": {
+              "target": "x-apple.systempreferences:com.apple.settings.PrivacySecurity.extension",
+              "type": "url"
+            },
+            "icon": "sf:hand.raised.fill",
+            "name": "Privacy & Security"
+          },
+          {
+            "action": {
+              "target": "x-apple.systempreferences:com.apple.Accessibility-Settings.extension",
+              "type": "url"
+            },
+            "icon": "sf:accessibility",
+            "name": "Accessibility"
+          },
+          {
+            "action": {
+              "target": "x-apple.systempreferences:com.apple.settings.Storage",
+              "type": "url"
+            },
+            "icon": "sf:internaldrive.fill",
+            "name": "Storage"
+          },
+          {
+            "action": {
+              "target": "x-apple.systempreferences:com.apple.Software-Update-Settings.extension",
+              "type": "url"
+            },
+            "icon": "sf:arrow.triangle.2.circlepath",
+            "name": "Software Update"
+          }
+        ],
+        "name": "Settings Panes"
+      }
+    ]
+  },
+  "version": "1.0"
+}

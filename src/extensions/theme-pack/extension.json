@@ -1,0 +1,17 @@
+{
+  "apiVersion": 1,
+  "author": "AINCRAD",
+  "description": "Four themes: Black Swordsman (dark, blue), The Flash (white, crimson), Sniper (teal) and Navigation Pixie (pink). Enable, then Install Themes.",
+  "id": "aincrad.theme-pack",
+  "name": "Swordsman Theme Pack",
+  "permissions": [],
+  "provides": {
+    "themes": [
+      "themes/black-swordsman.json",
+      "themes/flash.json",
+      "themes/sniper.json",
+      "themes/navigation-pixie.json"
+    ]
+  },
+  "version": "1.0"
+}

@@ -1,0 +1,131 @@
+{
+  "apiVersion": 1,
+  "author": "AINCRAD",
+  "description": "Says good morning, afternoon or evening when AINCRAD starts.",
+  "id": "aincrad.greeting",
+  "name": "Time Greeting",
+  "permissions": [],
+  "provides": {
+    "scripts": [
+      {
+        "steps": [
+          {
+            "fields": {
+              "name": "h"
+            },
+            "inputs": {
+              "value": {
+                "fields": {
+                  "part": "hour"
+                },
+                "inputs": {},
+                "op": "sense.time"
+              }
+            },
+            "op": "var.set"
+          },
+          {
+            "body": [
+              {
+                "fields": {},
+                "inputs": {
+                  "text": {
+                    "fields": {
+                      "value": "Good morning, player. Link start!"
+                    },
+                    "op": "literal"
+                  }
+                },
+                "op": "looks.message"
+              }
+            ],
+            "elseBody": [
+              {
+                "body": [
+                  {
+                    "fields": {},
+                    "inputs": {
+                      "text": {
+                        "fields": {
+                          "value": "Good afternoon, player. Link start!"
+                        },
+                        "op": "literal"
+                      }
+                    },
+                    "op": "looks.message"
+                  }
+                ],
+                "elseBody": [
+                  {
+                    "fields": {},
+                    "inputs": {
+                      "text": {
+                        "fields": {
+                          "value": "Good evening, player. Link start!"
+                        },
+                        "op": "literal"
+                      }
+                    },
+                    "op": "looks.message"
+                  }
+                ],
+                "fields": {},
+                "inputs": {
+                  "condition": {
+                    "fields": {},
+                    "inputs": {
+                      "a": {
+                        "fields": {
+                          "name": "h"
+                        },
+                        "inputs": {},
+                        "op": "var.get"
+                      },
+                      "b": {
+                        "fields": {
+                          "value": "18"
+                        },
+                        "op": "literal"
+                      }
+                    },
+                    "op": "op.lt"
+                  }
+                },
+                "op": "control.ifElse"
+              }
+            ],
+            "fields": {},
+            "inputs": {
+              "condition": {
+                "fields": {},
+                "inputs": {
+                  "a": {
+                    "fields": {
+                      "name": "h"
+                    },
+                    "inputs": {},
+                    "op": "var.get"
+                  },
+                  "b": {
+                    "fields": {
+                      "value": "12"
+                    },
+                    "op": "literal"
+                  }
+                },
+                "op": "op.lt"
+              }
+            },
+            "op": "control.ifElse"
+          }
+        ],
+        "trigger": {
+          "fields": {},
+          "inputs": {},
+          "op": "ext.started"
+        }
+      }
+    ]
+  },
+  "version": "1.0"
+}

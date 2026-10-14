@@ -1,0 +1,187 @@
+{
+  "apiVersion": 1,
+  "author": "AINCRAD",
+  "description": "Hides your desktop widgets while Steam, Heroic or Prism Launcher is open, and brings them back when it quits.",
+  "id": "aincrad.battle-mode",
+  "name": "Battle Mode",
+  "permissions": [],
+  "provides": {
+    "scripts": [
+      {
+        "steps": [
+          {
+            "fields": {
+              "mode": "hide"
+            },
+            "inputs": {},
+            "op": "looks.widgets"
+          },
+          {
+            "fields": {},
+            "inputs": {
+              "text": {
+                "fields": {
+                  "value": "Steam started. Battle mode: widgets hidden."
+                },
+                "op": "literal"
+              }
+            },
+            "op": "looks.message"
+          }
+        ],
+        "trigger": {
+          "fields": {},
+          "inputs": {
+            "app": {
+              "fields": {
+                "value": "Steam"
+              },
+              "op": "literal"
+            }
+          },
+          "op": "app.launched"
+        }
+      },
+      {
+        "steps": [
+          {
+            "fields": {
+              "mode": "show"
+            },
+            "inputs": {},
+            "op": "looks.widgets"
+          }
+        ],
+        "trigger": {
+          "fields": {},
+          "inputs": {
+            "app": {
+              "fields": {
+                "value": "Steam"
+              },
+              "op": "literal"
+            }
+          },
+          "op": "app.quit"
+        }
+      },
+      {
+        "steps": [
+          {
+            "fields": {
+              "mode": "hide"
+            },
+            "inputs": {},
+            "op": "looks.widgets"
+          },
+          {
+            "fields": {},
+            "inputs": {
+              "text": {
+                "fields": {
+                  "value": "Heroic started. Battle mode: widgets hidden."
+                },
+                "op": "literal"
+              }
+            },
+            "op": "looks.message"
+          }
+        ],
+        "trigger": {
+          "fields": {},
+          "inputs": {
+            "app": {
+              "fields": {
+                "value": "Heroic"
+              },
+              "op": "literal"
+            }
+          },
+          "op": "app.launched"
+        }
+      },
+      {
+        "steps": [
+          {
+            "fields": {
+              "mode": "show"
+            },
+            "inputs": {},
+            "op": "looks.widgets"
+          }
+        ],
+        "trigger": {
+          "fields": {},
+          "inputs": {
+            "app": {
+              "fields": {
+                "value": "Heroic"
+              },
+              "op": "literal"
+            }
+          },
+          "op": "app.quit"
+        }
+      },
+      {
+        "steps": [
+          {
+            "fields": {
+              "mode": "hide"
+            },
+            "inputs": {},
+            "op": "looks.widgets"
+          },
+          {
+            "fields": {},
+            "inputs": {
+              "text": {
+                "fields": {
+                  "value": "Prism Launcher started. Battle mode: widgets hidden."
+                },
+                "op": "literal"
+              }
+            },
+            "op": "looks.message"
+          }
+        ],
+        "trigger": {
+          "fields": {},
+          "inputs": {
+            "app": {
+              "fields": {
+                "value": "Prism Launcher"
+              },
+              "op": "literal"
+            }
+          },
+          "op": "app.launched"
+        }
+      },
+      {
+        "steps": [
+          {
+            "fields": {
+              "mode": "show"
+            },
+            "inputs": {},
+            "op": "looks.widgets"
+          }
+        ],
+        "trigger": {
+          "fields": {},
+          "inputs": {
+            "app": {
+              "fields": {
+                "value": "Prism Launcher"
+              },
+              "op": "literal"
+            }
+          },
+          "op": "app.quit"
+        }
+      }
+    ]
+  },
+  "version": "1.0"
+}

@@ -19,6 +19,7 @@ src/themes/<id>.json           theme sources (keys left out use Aincrad Classic)
 src/extensions/<folder>/       extension folders (extension.json + any data files)
 tools/build_catalog.py         packages, previews, checksums → catalog.json
 tools/seed_examples.py         wrote the example extensions (kept for reference)
+tools/plugin_pack.py           writes the extension pack (also bundled in the app with --app <repo>)
 packages/                      built: themes/*.json and *.aincrad files
 previews/                      built: 500×260 preview images
 catalog.json                   built: the index AINCRAD reads
@@ -55,5 +56,6 @@ Theme ids become file names in the user's themes folder.
 |---|---|
 | Themes | Aincrad Classic, Dark Aincrad, Alfheim, Gun Gale, Underworld, Midnight Blue |
 | Extensions | System HP (CPU as an HP gauge) · Steam Mode (Gun Gale theme while Steam runs) · Focus Timer (25-minute focus with menu + gauge) · Welcome Message · Weather (Open-Meteo, needs network) |
+| Extension pack (also preinstalled in AINCRAD) | Settings Panes · Quick Folders · Web Quick Links · Developer Hub · Media Hub · Player Stats (MP/Stamina gauges) · Floor Counter · Low HP Warning · Storage Alert · Rest Point · Hourly Chime · Time Greeting · Motivation · Dice & Coins · Battle Mode · Swordsman Theme Pack |
 
 Unofficial fan content, not affiliated with the Sword Art Online rights holders.
